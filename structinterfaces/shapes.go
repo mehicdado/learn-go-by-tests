@@ -2,6 +2,11 @@ package structinterfaces
 
 import "math"
 
+//Shape has one method for the calculation of Area
+type Shape interface {
+	Area() float64
+}
+
 //Rectangle have hight and width.
 type Rectangle struct {
 	Width  float64

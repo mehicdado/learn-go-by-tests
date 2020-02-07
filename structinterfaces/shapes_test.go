@@ -2,10 +2,6 @@ package structinterfaces
 
 import "testing"
 
-type Shape interface {
-	Area() float64
-}
-
 func TestPerimeter(t *testing.T) {
 	rectangle := Rectangle{10.0, 10.0}
 	got := Perimeter(rectangle)
@@ -24,7 +20,7 @@ func TestArea(t *testing.T) {
 	}{
 		{name: "Rectangle", shape: Rectangle{2.0, 10.0}, hasArea: 20.0},
 		{name: "Circle", shape: Circle{10}, hasArea: 314.1592653589793},
-		{name: "Triangle", shape: Triangle{12, 6}, hasArea: 56.0},
+		{name: "Triangle", shape: Triangle{12, 6}, hasArea: 36.0},
 	}
 
 	for _, tt := range areaTests {
